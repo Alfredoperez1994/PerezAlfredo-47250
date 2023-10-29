@@ -1,12 +1,17 @@
 header {
     display: flex;
-    justify-content: space-between;
-    background-color: rgb(43, 226, 150);
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logoAika {
+    width: 150px;
 }
 
 li {
     display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-    color: rgb(128, 0, 128);
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
