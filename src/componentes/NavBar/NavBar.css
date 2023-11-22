@@ -2,11 +2,16 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+  
+    
     
 }
 
 .logoAika {
     width: 150px;
+    border-radius: 80px;
+    border: solid rgb(112, 19, 112);
 }
 
 li {
@@ -14,4 +19,5 @@ li {
     margin: 0 15px;
     text-transform: uppercase;
     font-weight: bold;
+   
 }

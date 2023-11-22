@@ -1,4 +1,6 @@
 .contenedorProductos {
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(45, 165, 45);
+    border-radius: 30px;
 }

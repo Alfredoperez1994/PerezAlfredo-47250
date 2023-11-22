@@ -1,22 +1,32 @@
-import { useState, useEffect } from "react";
-import { getProductos } from "../../asyncmock";
-import ItemList from "../ItemList/ItemList";
+import { useState} from "react";
 
-const ItemListContainer = () => {
-    const [productos, setProductos] = useState([]);
+const Contador = ({ inicial, stock, funcionAgregar }) => {
+    const [contador, setContador] = useState(inicial);
 
-    useEffect(() => {
-        getProductos()
-            .then(respuesta => setProductos(respuesta))
-            .catch(error => console.log(error))
-    }, [])
+
+    const sumarContador = () => {
+        if (contador < stock) {
+            setContador(contador + 1);
+        }
+    }
+
+    const restarContador = () => {
+        if (contador > inicial) {
+            setContador(contador - 1);
+        }
+    }
 
     return (
         <>
-            <h2>Mis Productos</h2>
-            <ItemList productos={productos} />
+            <div>
+                <button onClick={restarContador}> - </button>
+                <strong> {contador} </strong>
+                <button onClick={sumarContador}> + </button>
+            </div>
+            <button onClick={()=> funcionAgregar(contador)}> Agregar al Carrito </button>
         </>
+
     )
 }
 
-export default ItemListContainer
+export default Contador

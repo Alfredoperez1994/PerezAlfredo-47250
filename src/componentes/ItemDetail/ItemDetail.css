@@ -1,9 +1,11 @@
 .contenedorItem {
     text-align: center;
-    border: 1px solid black;
     margin: 4rem;
+   font-size: medium;
+    
+    
 }
 
 img {
-    width: 35vw;
+    width: 20vw;
 }
